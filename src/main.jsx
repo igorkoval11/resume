@@ -109,6 +109,11 @@ function App() {
             <p className="role">{profile.role}</p>
           </div>
 
+          <figure className="profile-photo">
+            <img src="/igor-kovalevsky-photo.jpg" alt="Igor Kovalevsky portrait" />
+            <figcaption>Profile photo</figcaption>
+          </figure>
+
           <div className="availability-note">
             <span aria-hidden="true" />
             <p>Open to a sales role with customer communication and active sales practice.</p>
