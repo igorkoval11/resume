@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import editorialDesk from "./assets/editorial-desk.webp";
-import communicationMap from "./assets/communication-map.webp";
 import "./styles.css";
 
 const profile = {
@@ -155,18 +153,6 @@ function App() {
             <p className="eyebrow">Career Objective</p>
             <h2>Responsible. Communicative. Ready to grow in sales.</h2>
             <p className="lead">{profile.objective}</p>
-
-            <figure className="visual-card visual-card--hero">
-              <img
-                src={editorialDesk}
-                alt="Editorial desk scene with a notebook, phone, paper, and warm light"
-                decoding="async"
-              />
-              <figcaption>
-                <span>Communication setup</span>
-                <span>Sales-focused profile</span>
-              </figcaption>
-            </figure>
           </div>
         </section>
 
@@ -201,18 +187,6 @@ function App() {
           <div className="statement-block">
             <p>{profile.experience}</p>
           </div>
-          <figure className="visual-card visual-card--wide">
-            <img
-              src={communicationMap}
-              alt="Editorial paper composition with graphite network lines and a bronze paper clip"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption>
-              <span>Customer connection map</span>
-              <span>Negotiation mindset</span>
-            </figcaption>
-          </figure>
         </SectionFrame>
 
         <SectionFrame id="skills" index="04" eyebrow="Skills">
