@@ -159,26 +159,29 @@ h1 span {
 }
 
 .profile-photo {
-  width: min(9.5rem, 42vw);
-  margin: clamp(1.5rem, 3vw, 2.2rem) 0 0 auto;
+  width: min(10rem, 42vw);
+  margin: clamp(1.5rem, 3vw, 2.2rem) auto 0 54%;
+  border: 1px solid rgba(37, 35, 31, 0.16);
+  padding: 0.45rem;
+  background: rgba(255, 252, 245, 0.62);
 }
 
 .profile-photo img {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
-  border: 1px solid rgba(37, 35, 31, 0.18);
+  border: 1px solid rgba(37, 35, 31, 0.1);
   object-fit: cover;
   object-position: center 28%;
   filter: saturate(0.86) contrast(1.02);
 }
 
 .profile-photo figcaption {
-  margin-top: 0.5rem;
-  color: var(--accent);
-  font-size: 0.64rem;
+  margin-top: 0.42rem;
+  color: rgba(123, 107, 66, 0.66);
+  font-size: 0.58rem;
   font-weight: 800;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.14em;
   text-align: right;
   text-transform: uppercase;
 }
