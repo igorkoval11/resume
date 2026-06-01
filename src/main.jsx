@@ -27,7 +27,7 @@ const profile = {
     },
   ],
   experience:
-    "I do not have official work experience yet, but I am highly motivated to develop in the field of sales, learn new tools, and apply my communication skills in practice.",
+    "Currently building practical sales experience with a strong focus on customer communication, negotiation, and CRM tools.",
   skills: [
     "Communication skills",
     "Teamwork",
@@ -113,6 +113,11 @@ function App() {
             <span aria-hidden="true" />
             <p>Open to a sales role with customer communication and active sales practice.</p>
           </div>
+
+          <a className="download-link" href="/igor-kovalevsky-resume.pdf" download>
+            <span>Download Resume PDF</span>
+            <span aria-hidden="true">↓</span>
+          </a>
         </div>
 
         <nav className="resume-nav" aria-label="Resume sections">
@@ -211,6 +216,16 @@ function App() {
             ))}
           </div>
         </SectionFrame>
+
+        <section className="contact-cta reveal-item" aria-label="Contact Igor">
+          <p className="eyebrow">Contact</p>
+          <h2>Interested in working together?</h2>
+          <p>Contact Igor to discuss a sales opportunity.</p>
+          <div className="contact-cta__links">
+            <a href={`mailto:${profile.email}`}>Contact Igor</a>
+            <a href={`tel:${profile.phone.replaceAll(" ", "")}`}>{profile.phone}</a>
+          </div>
+        </section>
       </section>
     </main>
   );

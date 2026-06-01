@@ -223,6 +223,37 @@ h1 span {
   letter-spacing: -0.05em;
 }
 
+.download-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1.25rem;
+  border: 1px solid rgba(123, 107, 66, 0.38);
+  padding: 0.9rem 1rem;
+  background: rgba(123, 107, 66, 0.1);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    background-color 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.download-link:hover {
+  border-color: rgba(123, 107, 66, 0.62);
+  background: rgba(123, 107, 66, 0.16);
+  transform: translateY(-2px);
+}
+
+.download-link:active {
+  transform: translateY(0);
+}
+
 .contact-card {
   display: grid;
   gap: 0.8rem;
@@ -537,7 +568,54 @@ h3 {
 }
 
 .content-section--last {
-  padding-bottom: 0;
+  padding-bottom: clamp(2rem, 5vw, 5rem);
+}
+
+.contact-cta {
+  border-top: 1px solid var(--line);
+  padding: clamp(2.5rem, 6vw, 6rem) 0 0 calc(clamp(4.5rem, 7vw, 6rem) + clamp(1rem, 4vw, 4rem));
+}
+
+.contact-cta h2 {
+  max-width: 12ch;
+  margin-bottom: 1rem;
+  font-size: clamp(2.6rem, 5vw, 5.4rem);
+}
+
+.contact-cta p:not(.eyebrow) {
+  max-width: 48ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.contact-cta__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+}
+
+.contact-cta__links a {
+  border: 1px solid var(--line);
+  padding: 0.78rem 1rem;
+  background: rgba(255, 252, 245, 0.5);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition:
+    background-color 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-cta__links a:hover {
+  border-color: rgba(123, 107, 66, 0.42);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
 }
 
 .reveal-item {
@@ -666,6 +744,10 @@ h3 {
     gap: 1.25rem;
   }
 
+  .download-link {
+    margin-top: 0.25rem;
+  }
+
   .contact-card,
   .language-block {
     margin-top: 0;
@@ -687,6 +769,10 @@ h3 {
 
   .editorial-strip {
     margin-left: 0;
+    padding-left: 0;
+  }
+
+  .contact-cta {
     padding-left: 0;
   }
 
